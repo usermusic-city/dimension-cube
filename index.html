@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#11141A" />
+  <title>维度魔方·多面空间</title>
+</head>
+<body>
+  <div id="app">
+    <div id="viewport"></div>
+
+    <div id="hud">
+      <div id="hud-level" class="hud-card">
+        <div class="lv-name">维度魔方</div>
+        <div class="lv-desc">空间推理·多面还原</div>
+      </div>
+      <div id="hud-stats" class="hud-card">
+        <div class="steps"><small>操作步数</small><span id="steps">0</span></div>
+        <div id="hud-progress">
+          <div class="bar" id="progress-bar"></div>
+          <div class="label" id="progress-label">0 / 6 面</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="dock">
+      <button class="dock-btn" id="btn-rotate">旋 转</button>
+      <button class="dock-btn" id="btn-hint">提 示</button>
+      <button class="dock-btn accent" id="btn-reset">重 置</button>
+      <button class="dock-btn" id="btn-menu">关 卡</button>
+    </div>
+
+    <div id="toast"></div>
+
+    <div class="overlay" id="menu-overlay">
+      <div class="panel">
+        <div class="game-title">维度魔方<span class="sub">DIMENSION CUBE · 多面空间</span></div>
+        <div class="title-line"></div>
+        <div class="level-list" id="level-list"></div>
+      </div>
+    </div>
+
+    <div class="overlay hidden" id="win-overlay">
+      <div class="panel" id="win-panel">
+        <div class="big">还 原 完 成</div>
+        <div class="title-line"></div>
+        <div class="stat">本关操作 <b id="win-steps">0</b> 步</div>
+        <div id="win-actions">
+          <button class="dock-btn" id="btn-next">下一关</button>
+          <button class="dock-btn accent" id="btn-back">回菜单</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
